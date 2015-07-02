@@ -27,7 +27,7 @@ if (process.env.REDISTOGO_URL) {
 }
 
 var shareOptions = {
-  db: {type: 'redis'}
+  db: {type: 'redis', client: redisClient}
 };
 
 sharejs.server.attach(app, shareOptions);
